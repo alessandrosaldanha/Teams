@@ -10,7 +10,7 @@ import { PlayerCard } from "@components./PlayersCard";
 import { ButtonIcon } from "@components./Buttonicon";
 
 
-import { Container, Form, HeaderList, NumbersOfPlayers } from "./styles";
+import { Container, Form, HeaderList, NumberOfPlayers } from "./styles";
 
 
 
@@ -18,7 +18,7 @@ import { Container, Form, HeaderList, NumbersOfPlayers } from "./styles";
 
 export function Players() { 
     const [team, setTeam] = useState('Time A');
-    const [players, setPlayers] = useState([ ]);
+    const [players, setPlayers] = useState(['Leo','Czar', 'Alê']);
 
     return (
         <Container>
@@ -51,9 +51,9 @@ export function Players() {
         )}
         horizontal
         />
-                <NumbersOfPlayers>
+                <NumberOfPlayers>
                     {players.length}
-                </NumbersOfPlayers>
+                </NumberOfPlayers>
             </HeaderList>
 
                 <FlatList 
