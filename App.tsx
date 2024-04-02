@@ -6,7 +6,7 @@ import { Loading } from '@components./Loading';
 
 import theme from './src/theme';
 
-import { Gruops } from '@screens/Groups';
+import { Players } from '@screens/Players';
 
 export default function App() {
   const [fontsLoaded] = useFonts({ Roboto_400Regular, Roboto_700Bold });
@@ -20,7 +20,7 @@ export default function App() {
       backgroundColor="transparent"
       translucent
       />
-      { fontsLoaded ? <Gruops /> : <Loading/> }
+      { fontsLoaded ? <Players /> : <Loading/> }
     </ThemeProvider>
   );
 }

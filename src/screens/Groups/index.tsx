@@ -27,6 +27,7 @@ export function Gruops() {
             title={item}
         />
     )}
+
     contentContainerStyle={groups.length === 0 && { flex: 1}}
     ListEmptyComponent={() => (
         <ListEmpty 
