@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import { FlatList } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
+
 import { Header } from '@components./Header';
 import { Highlight } from '@components./Highlight';
 import { GruopCard } from '@components./GroupCard';
@@ -8,8 +10,15 @@ import { Button } from '@components./Button';
 
 import { Container } from './styles';
 
-export function Gruops() {
+export function Gruops( ) {
     const [groups, setGroups] = useState<string[]>([]);
+
+    const navigation = useNavigation();
+
+    function handleNewGroup(){
+        navigation.navigate('new');
+
+    }
 
     return (
     <Container>
@@ -39,6 +48,7 @@ export function Gruops() {
 
     <Button
         title="Criar nova turma"
+        onPress={handleNewGroup}
     />
 
     </Container>
