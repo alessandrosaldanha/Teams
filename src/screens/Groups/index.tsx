@@ -54,7 +54,7 @@ export function Gruops( ) {
     contentContainerStyle={groups.length === 0 && { flex: 1}}
     ListEmptyComponent={() => (
         <ListEmpty 
-                message="Que tal cadastrar a primeira turma?"
+                message="Cadastrar a primeira turma?"
             />
         )}
         showsVerticalScrollIndicator={false}
